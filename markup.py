@@ -26,6 +26,7 @@ link_keyboard = InlineKeyboardMarkup(
             [InlineKeyboardButton(text='тгк', url='https://t.me/+MPFubbZ_99I1Yzc6')],
             [InlineKeyboardButton(text='тг альфа', url='https://t.me/AlfaBank')],
             [InlineKeyboardButton(text='сф', url='https://www.w3schools.com/python/ref_func_input.asp')],
+            [InlineKeyboardButton(text='тгк 2', url='https://github.com/praisdworthy/bot2')]
         ]
     )
 
