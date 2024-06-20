@@ -11,6 +11,7 @@ from markup import hudi_sell
 router = Router()
 data = []
 
+
 @router.message(Menu.menu)
 async def reply(message: Message):
     if message.text.lower() in ['меню', '/menu']:
