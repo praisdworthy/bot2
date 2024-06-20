@@ -39,7 +39,7 @@ async def name(message: Message, state: FSMContext):
 async def age(message: Message, state: FSMContext):
     if message.text.isdigit():
         if int(message.text) < 18:
-            text = 'простите, для вас функция недоступна'
+            text = 'для вас функция недоступна'
             await message.answer(text=text)
             await state.set_state(Form.stop)
         else:
@@ -48,7 +48,7 @@ async def age(message: Message, state: FSMContext):
             text = ('введите email')
             await message.answer(text=text)
     else:
-       text = 'извините, я вас не понимаю, используйте цифры'
+       text = 'я вас не понимаю, используйте цифры'
        await message.answer(text=text)
 
 
@@ -64,7 +64,7 @@ async def email(message: Message, state: FSMContext):
         data_dict = await state.get_data()
         await create_profile(data_dict['id'])
         await edit_profile(data_dict['id'],(data_dict['name']),(data_dict['age']),(data_dict['email']))
-        await message.answer('спасибо! анкета заполнена, нажми на кнопку ниже чтобы открыть меню \n Также можете пройти голосование',
+        await message.answer('анкета заполнена, нажми на кнопку ниже чтобы открыть меню \n Также можете пройти голосование',
                              reply_markup=menu_button
                              )
         await state.set_state(Menu.menu)
